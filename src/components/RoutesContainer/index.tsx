@@ -35,7 +35,7 @@ export const RoutesContainer = () => {
   }, [scrollY]);
 
   return (
-    <>
+    <>    
       <Header scrolled={scrolled} />
       <AnimatePresence mode="wait">
         <Routes key={path.pathname} location={path}>

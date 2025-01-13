@@ -7,7 +7,6 @@ function App() {
     <div className="mx-auto w-full text-brown">
       <Router>
         <RoutesContainer />
-        <SpeedInsights />
       </Router>
     </div>
   );
