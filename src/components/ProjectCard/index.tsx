@@ -29,11 +29,11 @@ export const ProjectCard = ({ project, position }: ProjectCardProps) => (
       >
         <motion.img
           src={project.image}
-          className="h-48 w-full select-none rounded-2xl object-cover shadow-2xl shadow-darkerAccent/30 dark:shadow-lighterAccent/20 sm:h-72"
+          className="h-48 w-full select-none rounded-2xl object-cover shadow-2xl shadow-tertiary/30 dark:shadow-highlight/20 sm:h-72"
         />
         <div className="px-6  pt-3">
           <h1 className="pt-2 text-xl font-medium">{project.name}</h1>
-          <h4 className="text-sm text-darkerAccent dark:text-lighterAccent">
+          <h4 className="text-sm text-tertiary dark:text-highlight">
             Desenvolvido em: {project.developedIn}
           </h4>
 

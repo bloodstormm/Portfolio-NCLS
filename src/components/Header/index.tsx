@@ -60,13 +60,13 @@ export const Header = ({ scrolled }: HeaderProps) => {
       {...fadeInDown}
       transition={{ ...fadeInDown.transition, delay: 1.1 }}
       className={`${
-        scrolled && "bg-darkBrown/10 text-whity shadow-sm backdrop-blur-xl"
+        scrolled && "bg-brown/10 text-offWhite shadow-sm backdrop-blur-xl"
       } sticky top-0 z-30 flex py-6 transition-colors duration-150`}
     >
       <div className="container mx-auto flex items-center justify-between px-10 xl:px-0 ">
         <Link
           to="/"
-          className="font-Odasans text-5xl font-semibold text-accent dark:text-darkAccent"
+          className="font-Odasans text-5xl font-semibold text-primary dark:text-secondary"
           onClick={() => window.scrollTo(0, 0)}
         >
           NCLS
@@ -107,19 +107,19 @@ export const Header = ({ scrolled }: HeaderProps) => {
           {theme === "light" ? (
             <BsMoon
               onClick={handleSwitchTheme}
-              className={`h-6 w-6 ${scrolled ? 'text-whity' : 'text-darkBrown'}  hover:scale-125 cursor-pointer transition duration-500`}
+              className={`h-6 w-6 ${scrolled ? 'text-offWhite' : 'text-brown'}  hover:scale-125 cursor-pointer transition duration-500`}
             />
           ) : (
             <BsStars
               onClick={handleSwitchTheme}
-              className="h-6 w-6 text-whity hover:scale-125 cursor-pointer transition duration-500"
+              className="h-6 w-6 text-offWhite hover:scale-125 cursor-pointer transition duration-500"
             />
           )}
           <a
             href={curriculumUrl}
             download
             target="_blank"
-            className="hidden items-center gap-3 rounded-3xl bg-accent dark:bg-darkAccent hover:brightness-110 py-3 px-5 text-white transition-all disabled:cursor-not-allowed disabled:hover:bg-accent/40 disabled:hover:text-white/80 lg:flex"
+            className="hidden items-center gap-3 rounded-3xl bg-primary dark:bg-secondary hover:brightness-110 py-3 px-5 text-white transition-all disabled:cursor-not-allowed disabled:hover:bg-primary/40 disabled:hover:text-white/80 lg:flex"
           >
             Ver Currículo
             <MdOpenInNew />

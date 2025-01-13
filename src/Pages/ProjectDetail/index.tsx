@@ -47,7 +47,7 @@ export const ProjectDetail = ({ scrolled }: ProjectDetailProps) => {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: 50, opacity: 0 }}
                   transition={{ ...transition, delay: 1 }}
-                  className="text-sm text-darkerAccent dark:text-lighterAccent"
+                  className="text-sm text-tertiary dark:text-highlight"
                 >
                   {filteredProject?.stacks.split(";").join(" · ")}
                 </motion.h4>
@@ -93,7 +93,7 @@ export const ProjectDetail = ({ scrolled }: ProjectDetailProps) => {
                     <motion.div
                       {...fadeInUp}
                       transition={{ ...transition }}
-                      className="fixed bottom-10 right-8 z-30 block rounded-xl bg-accent/30 p-3 transition-colors duration-300 hover:bg-accent/40"
+                      className="fixed bottom-10 right-8 z-30 block rounded-xl bg-primary/30 p-3 transition-colors duration-300 hover:bg-primary/40"
                     >
                       <Link to="/projects" className="flex items-center gap-2">
                         <BsArrowReturnLeft className="text-2xl sm:text-base" />
@@ -130,7 +130,7 @@ export const ProjectDetail = ({ scrolled }: ProjectDetailProps) => {
                 className="container mx-auto mt-6 space-y-12 p-6 sm:mt-12 sm:space-y-16"
               >
                 <div className="mx-auto grid max-w-6xl lg:grid-cols-4">
-                  <h2 className="mb-4 text-xl font-medium text-darkerAccent dark:text-lighterAccent lg:mb-0 lg:text-lg">
+                  <h2 className="mb-4 text-xl font-medium text-tertiary dark:text-highlight lg:mb-0 lg:text-lg">
                     Descrição
                   </h2>
 
@@ -140,27 +140,27 @@ export const ProjectDetail = ({ scrolled }: ProjectDetailProps) => {
                 </div>
 
                 <div className="mx-auto grid max-w-6xl lg:grid-cols-4">
-                  <h2 className="mb-4 text-xl font-medium text-darkerAccent dark:text-lighterAccent lg:mb-0 lg:text-lg">
+                  <h2 className="mb-4 text-xl font-medium text-tertiary dark:text-highlight lg:mb-0 lg:text-lg">
                     Informações
                   </h2>
 
                   <div className="col-span-3 max-w-3xl space-y-2 text-base lg:text-lg">
                     <p>
                       Projeto feito em:
-                      <span className="ml-1 font-medium text-accent dark:text-lighterAccent">
+                      <span className="ml-1 font-medium text-primary dark:text-highlight">
                         {filteredProject?.developedIn}
                       </span>
                     </p>
                     <p>
                       Stacks utilizadas:
-                      <span className="ml-1 font-medium text-accent dark:text-lighterAccent">
+                      <span className="ml-1 font-medium text-primary dark:text-highlight">
                         {filteredProject?.stacks.split(";").join(" - ")}
                       </span>
                     </p>
                   </div>
                 </div>
 
-                <h2 className="text-center border-t pt-8 border-darky/10 dark:border-whity/10 text-3xl font-medium ">
+                <h2 className="text-center border-t pt-8 border-background/10 dark:border-offWhite/10 text-3xl font-medium ">
                   Imagens do projeto:
                 </h2>
                 <div className="mx-auto w-full space-y-8 lg:w-3/4">

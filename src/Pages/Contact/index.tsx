@@ -77,7 +77,7 @@ export const Contact = () => {
           <motion.a
             variants={itemAnimation}
             href="https://api.whatsapp.com/send?phone=5512988770308"
-            className="transition-colors duration-300 hover:text-accent"
+            className="transition-colors duration-300 hover:text-primary"
             target="_blank"
           >
             <FaWhatsapp />
@@ -85,7 +85,7 @@ export const Contact = () => {
           <motion.a
             variants={itemAnimation}
             href="https://www.instagram.com/_nicolasantoss/"
-            className="transition-colors duration-300 hover:text-accent"
+            className="transition-colors duration-300 hover:text-primary"
             target="_blank"
           >
             <BsInstagram />
@@ -93,7 +93,7 @@ export const Contact = () => {
           <motion.a
             variants={itemAnimation}
             href="mailto:nicolasmalaquias2015@hotmail.com"
-            className="transition-colors duration-300 hover:text-accent"
+            className="transition-colors duration-300 hover:text-primary"
             target="_blank"
           >
             <HiOutlineMail />
@@ -102,7 +102,7 @@ export const Contact = () => {
           <motion.a
             variants={itemAnimation}
             href="https://www.linkedin.com/in/nicolas-malachias/"
-            className="transition-colors duration-300 hover:text-accent"
+            className="transition-colors duration-300 hover:text-primary"
             target="_blank"
           >
             <FaLinkedinIn />

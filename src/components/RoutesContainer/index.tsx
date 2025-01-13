@@ -28,10 +28,11 @@ export const RoutesContainer = () => {
 
   // UseEffect feito para ativar as estilizações do header / ProjectDetail quando scrollar
   useEffect(() => {
-    return scrollY.onChange((latest) => {
-      latest > 30 ? setScrolled(true) : setScrolled(false);
+    const unsubscribe = scrollY.on("change", (latest) => {
+      setScrolled(latest > 30);
     });
-  }, [scrolled]);
+    return () => unsubscribe();
+  }, [scrollY]);
 
   return (
     <>

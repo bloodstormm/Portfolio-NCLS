@@ -15,14 +15,11 @@ export const About = () => {
   const [aboutImage, setAboutImage] = useState("");
   const [imageDescription, setImageDescription] = useState("");
 
-  const dataNascimento = moment("2004-03-28", "YYYY-MM-DD");
   const hoje = moment();
-  // Calcular idade
-  const idade = hoje.diff(dataNascimento, "years");
+  const tempoDeExperiencia = hoje.diff("2022-01-01", "years");
 
   useEffect(() => {
     const randomPicture = Math.floor(Math.random() * aboutImages.length);
-    // Providing a random index to get the image and informations about it
     setAboutImage(aboutImages[randomPicture].image);
     setImageDescription(aboutImages[randomPicture].description);
   }, [location.pathname]);
@@ -42,29 +39,31 @@ export const About = () => {
               Sobre Mim
             </h1>
 
-            <p className="max-w-sm py-8 text-sm sm:max-w-2xl sm:text-base">
-              Eu me chamo Nícolas Malachias. Tenho {idade} anos e sou um
-              desenvolvedor Front-End apaixonado por criar interfaces atrativas
-              e intuitivas. Com experiência em ReactJS, TailwindCSS e Drupal,
-              trabalho na Johnson & Johnson, gerenciando um portal há mais de um
-              ano. Tenho experiência em liderança de pequenas equipes, aprendo e
-              me adapto rapidamente a novos desafios.
+            <p className="max-w-sm pt-8 pb-2 text-sm sm:max-w-2xl sm:text-base">
+            Oi, sou Nícolas Malachias, de Taubaté, SP. Graduado em Análise e Desenvolvimento de Sistemas, sou especializado em desenvolvimento front-end, com experiência em <b className="text-primary">React, Next.js, Angular e Supabase.</b>  
             </p>
 
-            <div className="mx-auto w-[90%] border border-darkBrown/10 dark:border-lightBrown/10"></div>
+            <p className="max-w-sm pb-2 text-sm sm:max-w-2xl sm:text-base">
+            Também sou apaixonado por UX/UI, com vivência em UX Research, prototipação e pesquisa com usuários. Tenho experiência em análise de problemas, levantamento de requisitos e metodologias ágeis como SCRUM.
+            </p>
+            <p className="max-w-sm pb-2 text-sm sm:max-w-2xl sm:text-base">
+            Falo inglês avançado e valorizo a comunicação e colaboração, sempre buscando melhorar com feedbacks e contribuir para projetos de sucesso.
+            </p>
 
-            <div className="my-4 flex w-full flex-col gap-4 rounded-xl bg-accent/20 dark:bg-darkAccent/20 py-4 px-3 text-center font-Wulkan text-xl font-semibold sm:m-6 sm:mx-auto sm:w-fit sm:flex-row sm:gap-8 sm:p-6 sm:text-3xl sm:font-normal">
+            <div className="mx-auto w-[90%] border border-brown/10 dark:border-beige/10"></div>
+
+            <div className="my-4 flex w-full flex-col gap-4 rounded-xl bg-primary/20 dark:bg-secondary/20 py-4 px-3 text-center font-Wulkan text-xl font-semibold sm:m-6 sm:mx-auto sm:w-fit sm:flex-row sm:gap-8 sm:p-6 sm:text-3xl sm:font-normal">
               <h2>
-                <span className="mr-2 text-2xl font-semibold text-accent">
-                  6+
+                <span className="mr-2 text-2xl font-semibold text-primary">
+                  7+
                 </span>
                 Projetos feitos
               </h2>
               <h2>
-                <span className="mr-2 text-2xl font-semibold text-accent">
-                  1,5+
+                <span className="mr-2 text-2xl font-semibold text-primary">
+                  {tempoDeExperiencia}
                 </span>
-                Ano de experiência
+                Anos de experiência
               </h2>
             </div>
           </motion.div>
@@ -78,20 +77,19 @@ export const About = () => {
           >
             <motion.div
               variants={itemAnimation}
-              className="rounded-xl w-full bg-whity/60 dark:bg-darky/60 p-4 text-center transition-shadow duration-500 hover:shadow-2xl hover:shadow-accent/50 dark:hover:shadow-darkAccent/30 xl:max-w-[17rem]"
+              className="rounded-xl w-full bg-offWhite/60 dark:bg-background border border-brown/20 p-4 text-center transition-shadow duration-500 hover:shadow-2xl hover:shadow-primary/50 dark:hover:shadow-secondary/30 xl:max-w-[17rem]"
             >
-              <HiOutlineCodeBracket className="mx-auto mb-2 text-4xl text-accent" />
+              <HiOutlineCodeBracket className="mx-auto mb-2 text-4xl text-primary" />
               <h3 className="font-semibold lg:text-lg ">Front-end</h3>
               <p className="pt-4">
-                Atualmente trabalho com Drupal, usando-o em
-                conjunto com React e TailwindCSS
+                Crio interfaces funcionais e bonitas, com foco na experiência do usuário
               </p>
             </motion.div>
             <motion.div
               variants={itemAnimation}
-              className="rounded-xl bg-whity/60 dark:bg-darky/60 p-4 text-center transition-shadow duration-500 hover:shadow-2xl hover:shadow-accent/50 dark:hover:shadow-darkAccent/30 xl:max-w-[17rem]"
+              className="rounded-xl bg-offWhite/60 dark:bg-background border border-brown/20 p-4 text-center transition-shadow duration-500 hover:shadow-2xl hover:shadow-primary/50 dark:hover:shadow-secondary/30 xl:max-w-[17rem]"
             >
-              <AiOutlineEye className="mx-auto mb-2 text-4xl text-accent" />
+              <AiOutlineEye className="mx-auto mb-2 text-4xl text-primary" />
               <h3 className="text-base font-semibold lg:text-lg ">
                 Visual & Design
               </h3>
@@ -102,9 +100,9 @@ export const About = () => {
             </motion.div>
             <motion.div
               variants={itemAnimation}
-              className="rounded-xl bg-whity/60 dark:bg-darky/60 p-4 text-center transition-shadow duration-500 hover:shadow-2xl hover:shadow-accent/50 dark:hover:shadow-darkAccent/30 xl:max-w-[17rem]"
+              className="rounded-xl bg-offWhite/60 dark:bg-background border border-brown/20 p-4 text-center transition-shadow duration-500 hover:shadow-2xl hover:shadow-primary/50 dark:hover:shadow-secondary/30 xl:max-w-[17rem]"
             >
-              <HiOutlineScale className="mx-auto mb-2 text-4xl text-accent" />
+              <HiOutlineScale className="mx-auto mb-2 text-4xl text-primary" />
               <h3 className="text-base font-semibold lg:text-lg ">
                 Princípios
               </h3>
@@ -131,7 +129,7 @@ export const About = () => {
             alt="A Picture about myself"
           />
 
-          <div className="hidden bg-gradient-to-t from-darky w-full to-transparent lg:absolute lg:bottom-0 lg:block lg:p-12">
+          <div className="hidden bg-gradient-to-t from-brown/70 dark:from-background/70 w-full to-transparent lg:absolute lg:bottom-0 lg:block lg:p-12">
             <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
               Esse sou eu! 🥂
             </h2>

@@ -24,7 +24,7 @@ export const Home = () => {
     <>
       <PageTransition />
 
-      <section className="container relative z-20 mx-auto w-full overflow-hidden sm:mt-4">
+      <section className="container relative z-20 mx-auto w-full overflow-hidden sm:mt-4 ">
         <motion.div
           {...fadeInUp}
           transition={{ ...fadeInUp.transition, delay: 0.2 }}
@@ -45,21 +45,21 @@ export const Home = () => {
             <div className="flex justify-center gap-10 pb-4 text-3xl sm:justify-start sm:pt-6">
               <a
                 href="https://www.instagram.com/_nicolasantoss/"
-                className="transition hover:text-accent"
+                className="transition hover:text-primary"
                 target="_blank"
               >
                 <BsInstagram />
               </a>
               <a
                 href="https://www.linkedin.com/in/nicolas-malachias/"
-                className="transition hover:text-accent"
+                className="transition hover:text-primary"
                 target="_blank"
               >
                 <FaLinkedinIn />
               </a>
               <a
                 href="https://github.com/bloodstormm"
-                className="transition hover:text-accent"
+                className="transition hover:text-primary"
                 target="_blank"
               >
                 <BsGithub />
@@ -84,9 +84,9 @@ export const Home = () => {
 
             <Link
               to="/projects"
-              className="absolute group -bottom-4 hover:scale-105 transition duration-300 left-6 hidden h-32 w-32 items-center justify-center rounded-full border border-darkBrown dark:border-lightBrown sm:flex lg:left-14 lg:h-40 lg:w-40 xl:bottom-0"
+              className="absolute group -bottom-4 hover:scale-105 transition duration-300 left-6 hidden h-32 w-32 items-center justify-center rounded-full border border-brown dark:border-beige sm:flex lg:left-14 lg:h-40 lg:w-40 xl:bottom-0"
             >
-              <div className="absolute top-2 right-1 h-6 w-6 rounded-full group-hover:animate-pulse transition bg-accent lg:top-1 lg:right-5"></div>
+              <div className="absolute top-2 right-1 h-6 w-6 rounded-full group-hover:animate-pulse transition bg-primary lg:top-1 lg:right-5"></div>
               <p className="w-20">Ver meus Projetos</p>
               <BsArrowUpRight className="h-5 w-5" />
             </Link>
@@ -95,7 +95,7 @@ export const Home = () => {
         <motion.div
           {...fadeInDown}
           transition={{ ...fadeInDown.transition, duration: 1.25 }}
-          className="flex mx-auto overflow-x-auto w-11/12 md:w-3/4 lg:w-full justify-center items-center gap-6 pt-4 pb-10 lg:gap-14 2xl:gap-20 sm:p-6"
+          className="flex mx-auto rounded-3xl overflow-x-auto w-11/12 md:w-3/4  justify-center items-center gap-6 pt-4 pb-10 lg:gap-14 2xl:gap-20 sm:p-6"
         >
           <img
             src={jnj}
@@ -120,18 +120,18 @@ export const Home = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.8 } }}
         exit={{ opacity: 0, transition: { duration: 0.8 } }}
-        className="absolute bottom-5 left-20 h-96 w-72 rounded-full bg-gradient-to-br from-accent dark:from-darkAccent to-transparent p-px sm:bottom-0 sm:rounded-t-full"
+        className="absolute bottom-5 left-20 h-96 w-72 rounded-full bg-gradient-to-br from-primary dark:from-secondary to-transparent p-px sm:bottom-0 sm:rounded-t-full"
       >
-        <div className="h-full w-full rounded-t-full bg-background dark:bg-darkBackground transition-colors duration-300" />
+        <div className="h-full w-full rounded-t-full bg-background dark:bg-background transition-colors duration-300" />
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.8 } }}
         exit={{ opacity: 0, transition: { duration: 0.8 } }}
         className="absolute top-0 right-0 h-64 w-56 rounded-b-full bg-gradient-to-tl
-         from-accent to-transparent p-px "
+         from-primary to-transparent p-px "
       >
-        <div className="h-full w-full rounded-b-full dark:bg-darkBackground bg-background transition-colors duration-300" />
+        <div className="h-full w-full rounded-b-full dark:bg-background bg-background transition-colors duration-300" />
       </motion.div>
     </>
   );

@@ -3,6 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Modo Claro */
+  --background: 229, 221, 212;
+  --primary: 197, 153, 93;
+  --secondary: 187, 145, 87;
+  --tertiary: 154, 122, 77;
+  --highlight: 178, 147, 102;
+  --brown: 61, 55, 49;
+  --beige: 205, 199, 193;
+  --offWhite: 255, 247, 236;
+}
+
+.dark {
+  --background: 32, 32, 32;
+  --primary: 197, 153, 93;
+  --secondary: 187, 145, 87;
+  --tertiary: 154, 122, 77;
+  --highlight: 178, 147, 102;
+  --brown: 230, 230, 230;
+  --beige: 180, 180, 180;
+  --offWhite: 245, 245, 245;
+}
+
 @font-face {
   font-family: "Odasans Semibold";
   src: url("../fonts/Odasans/Odasans-Semibold.ttf");
@@ -14,10 +37,10 @@
 
 @layer base {
   html {
-    @apply scroll-smooth selection:bg-accent dark:bg-darkAccent selection:text-darkBrown dark:selection:text-lightBrown;
+    @apply scroll-smooth selection:bg-primary dark:bg-secondary selection:text-brown dark:selection:text-beige;
   }
   body {
-    @apply bg-background transition-colors duration-300 dark:bg-darkBackground text-darky dark:text-whity font-Poppins;
+    @apply bg-background transition-colors duration-300 dark:bg-background text-background dark:text-offWhite font-Poppins;
   }
 
   .dotsGrid {
@@ -28,11 +51,11 @@
     margin: 0 calc(-50vw + 50%);
   }
   .bottomLine {
-    @apply relative inline-block outline-none after:block after:h-[2px] after:w-0 after:bg-accent dark:after:bg-darkAccent
+    @apply relative inline-block outline-none after:block after:h-[2px] after:w-0 after:bg-primary dark:after:bg-secondary
     after:transition-all after:duration-300 after:content-[''] hover:after:w-full
   }
   .ncls-title {
-    @apply after:content-['NCLS'] after:font-Odasans after:text-7xl md:after:text-8xl after:flex after:inset-0 after:justify-center after:items-center after:h-screen after:text-whity dark:after:text-darkAccent;
+    @apply after:content-['NCLS'] after:absolute after:font-Odasans after:text-7xl md:after:text-8xl after:flex after:inset-0 after:justify-center after:items-center after:h-screen after:text-offWhite dark:after:text-secondary;
   }
 }
 
@@ -50,11 +73,11 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-accent;
+  @apply bg-primary;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-darkerAccent;
+  @apply bg-tertiary;
 }

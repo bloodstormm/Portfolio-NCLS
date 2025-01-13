@@ -31,5 +31,18 @@
     "tailwindcss": "^3.2.4",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
-  }
+  },
+  "description": "![header](https://i.imgur.com/NOVOrX3.png)",
+  "main": "replaceColors.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloodstormm/Portfolio-NCLS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bloodstormm/Portfolio-NCLS/issues"
+  },
+  "homepage": "https://github.com/bloodstormm/Portfolio-NCLS#readme"
 }

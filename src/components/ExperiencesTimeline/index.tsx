@@ -22,19 +22,19 @@ export const ExperiencesTimeline = () => (
             className="relative mx-auto flex items-baseline gap-6 pl-4 pb-5 sm:max-w-none"
           >
             <div
-              className="right-0 h-3 w-3 rounded-full bg-darkerAccent dark:bg-lighterAccent before:absolute before:left-[22px] before:h-full
-               before:w-[1px] before:bg-darkerAccent dark:before:bg-lighterAccent "
+              className="right-0 h-3 w-3 rounded-full bg-tertiary dark:bg-highlight before:absolute before:left-[22px] before:h-full
+               before:w-[1px] before:bg-tertiary dark:before:bg-highlight "
             ></div>
 
             <div
               className="flex w-4/5 flex-col justify-center rounded-xl
-               bg-accent/20 dark:bg-darkAccent/20 p-4 text-base transition duration-300 hover:brightness-110 sm:w-[29rem]"
+               bg-primary/20 dark:bg-secondary/20 p-4 text-base transition duration-300 hover:brightness-110 sm:w-[29rem]"
             >
-              <p className="mb-1 text-xs text-darkerAccent dark:text-lighterAccent font-semibold">
+              <p className="mb-1 text-xs text-tertiary dark:text-highlight font-semibold">
                 {initialDate} - {finalDate}
               </p>
               <h2 className=" font-semibold">{company}</h2>
-              <h4 className="text-sm font-medium text-darkerAccent dark:text-lighterAccent">{role}</h4>
+              <h4 className="text-sm font-medium text-tertiary dark:text-highlight">{role}</h4>
 
               <p className="my-4">
                 {description
@@ -48,7 +48,7 @@ export const ExperiencesTimeline = () => (
                   {stack.map((Item, index) => (
                     <p
                       key={index}
-                      className="text-xl transition hover:text-accent"
+                      className="text-xl transition hover:text-primary"
                     >
                       {<Item />}
                     </p>
