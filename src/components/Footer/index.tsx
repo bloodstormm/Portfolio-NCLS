@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => (
   <footer className="mt-24 flex w-full items-center justify-center gap-8 divide-x divide-brown bg-background/60 dark:bg-background/60 dark:divide-beige p-4">
-    <h1>&copy; NCLS 2023</h1>
+    <h1>&copy; NCLS 2025</h1>
 
     {/* Redes sociais */}
     <div className="flex gap-6 pl-8 text-xl">
