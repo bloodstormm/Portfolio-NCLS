@@ -72,7 +72,7 @@ export const Header = ({ scrolled }: HeaderProps) => {
           NCLS
         </Link>
 
-        <div className="hidden gap-16 font-medium lg:flex">
+        <div className="hidden gap-16 font-medium text-sm xl:text-base lg:flex">
           <Link
             to="about"
             className="bottomLine"
@@ -119,7 +119,7 @@ export const Header = ({ scrolled }: HeaderProps) => {
             href={curriculumUrl}
             download
             target="_blank"
-            className="hidden items-center gap-3 rounded-3xl bg-primary dark:bg-secondary hover:brightness-110 py-3 px-5 text-white transition-all disabled:cursor-not-allowed disabled:hover:bg-primary/40 disabled:hover:text-white/80 lg:flex"
+            className="hidden items-center gap-3 rounded-3xl bg-primary dark:bg-secondary hover:brightness-110 py-3 px-5 text-white transition-all disabled:cursor-not-allowed xl:text-base text-sm disabled:hover:bg-primary/40 disabled:hover:text-white/80 lg:flex"
           >
             Ver Currículo
             <MdOpenInNew />

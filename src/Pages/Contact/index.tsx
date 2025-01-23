@@ -92,7 +92,7 @@ export const Contact = () => {
           </motion.a>
           <motion.a
             variants={itemAnimation}
-            href="mailto:nicolasmalaquias2015@hotmail.com"
+            href="mailto:nicolasmalaquias2015@gmail.com"
             className="transition-colors duration-300 hover:text-primary"
             target="_blank"
           >

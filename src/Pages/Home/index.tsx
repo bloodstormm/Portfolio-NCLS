@@ -11,6 +11,8 @@ import { jnj, opt, villarta } from "../../assets/companies";
 import { BsInstagram, BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { CompaniesCarousel } from "../../components/CompaniesCarousel";
+import { HiOutlineMail } from "react-icons/hi";
 
 export const Home = () => {
   const [homeImage, setHomeImage] = useState("");
@@ -24,32 +26,26 @@ export const Home = () => {
     <>
       <PageTransition />
 
-      <section className="container relative z-20 mx-auto w-full overflow-hidden sm:mt-4 ">
+      <section className="container relative z-20 mx-auto w-full h-FullScreen overflow-hidden sm:mt-4 flex flex-col items-center justify-center h-full">
         <motion.div
           {...fadeInUp}
           transition={{ ...fadeInUp.transition, delay: 0.2 }}
           className="mx-auto grid items-center gap-4 p-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-14 "
         >
           <div className="flex flex-col gap-6">
-            <h1 className="text-center font-Wulkan text-4xl font-medium uppercase lg:text-left lg:text-5xl">
+            <h1 className="text-center font-Wulkan text-4xl lg:text-5xl font-medium uppercase lg:text-left xl:text-5xl">
               Front-End
               <br className="hidden lg:block" /> Developer
             </h1>
 
-            <p className="text-sm lg:text-base">
+            <p className="text-sm xl:text-base">
               Olá, seja bem-vindo(a) ao meu portfólio! <br></br> Aqui você
-              encontrará meus projetos que venho feito ultimamente. Logo abaixo está algumas das minhas redes, sinta-se
-              à vontade de entrar em contato! 🤠
+              encontrará meus projetos que venho feito ultimamente. Logo abaixo
+              está algumas das minhas redes, sinta-se à vontade de entrar em
+              contato! 🤠
             </p>
             {/* Redes sociais */}
             <div className="flex justify-center gap-10 pb-4 text-3xl sm:justify-start sm:pt-6">
-              <a
-                href="https://www.instagram.com/_nicolasantoss/"
-                className="transition hover:text-primary"
-                target="_blank"
-              >
-                <BsInstagram />
-              </a>
               <a
                 href="https://www.linkedin.com/in/nicolas-malachias/"
                 className="transition hover:text-primary"
@@ -57,6 +53,14 @@ export const Home = () => {
               >
                 <FaLinkedinIn />
               </a>
+              <a
+                href="mailto:nicolasmalaquias2015@gmail.com"
+                className="transition-colors duration-300 hover:text-primary"
+                target="_blank"
+              >
+                <HiOutlineMail />
+              </a>
+
               <a
                 href="https://github.com/bloodstormm"
                 className="transition hover:text-primary"
@@ -78,7 +82,7 @@ export const Home = () => {
             />
           </div>
           <div className="relative h-2/3 ">
-            <h1 className="text-center font-Wulkan text-4xl uppercase md:hidden lg:block sm:text-left lg:text-6xl">
+            <h1 className="text-center font-Wulkan text-4xl lg:text-5xl uppercase md:hidden lg:block sm:text-left xl:text-6xl">
               Nícolas Malachias
             </h1>
 
@@ -92,26 +96,13 @@ export const Home = () => {
             </Link>
           </div>
         </motion.div>
+
         <motion.div
           {...fadeInDown}
           transition={{ ...fadeInDown.transition, duration: 1.25 }}
-          className="flex mx-auto rounded-3xl overflow-x-auto w-11/12 md:w-3/4  justify-center items-center gap-6 pt-4 pb-10 lg:gap-14 2xl:gap-20 sm:p-6"
+          className="flex mx-auto rounded-3xl overflow-x-auto w-full justify-center items-center gap-6 pt-4 pb-10 lg:gap-14 2xl:gap-20 sm:p-6"
         >
-          <img
-            src={jnj}
-            alt="jnj"
-            className="h-4 grayscale dark:invert sm:h-6 lg:h-7 2xl:h-9"
-          />
-          <img
-            src={opt}
-            alt="opt"
-            className="h-7 grayscale dark:brightness-200 sm:h-12 lg:h-14 2xl:h-16"
-          />
-          <img
-            src={villarta}
-            alt="villarta"
-            className="h-7 grayscale sm:h-12 lg:h-14 2xl:h-16"
-          />
+          {/* <CompaniesCarousel /> */}
         </motion.div>
       </section>
 

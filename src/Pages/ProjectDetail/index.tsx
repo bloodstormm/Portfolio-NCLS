@@ -134,7 +134,7 @@ export const ProjectDetail = ({ scrolled }: ProjectDetailProps) => {
                     Descrição
                   </h2>
 
-                  <p className="col-span-3 max-w-2xl text-base lg:text-lg">
+                  <p className="col-span-3 max-w-2xl text-base leading-normal">
                     {filteredProject?.description}
                   </p>
                 </div>
@@ -144,7 +144,7 @@ export const ProjectDetail = ({ scrolled }: ProjectDetailProps) => {
                     Informações
                   </h2>
 
-                  <div className="col-span-3 max-w-3xl space-y-2 text-base lg:text-lg">
+                  <div className="col-span-3 max-w-3xl space-y-2 text-base">
                     <p>
                       Projeto feito em:
                       <span className="ml-1 font-medium text-primary dark:text-highlight">

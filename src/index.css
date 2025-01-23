@@ -35,7 +35,7 @@
   src: url("../fonts/Wulkan/WulkanDisplayRegular.ttf");
 }
 
-@layer base {
+@layer utilities {
   html {
     @apply scroll-smooth selection:bg-primary dark:bg-secondary selection:text-brown dark:selection:text-beige;
   }
@@ -62,7 +62,8 @@
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
+  display: none;
 }
 
 /* Track */
@@ -80,4 +81,8 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-tertiary;
+}
+
+.h-FullScreen {
+  height: calc(100vh - 112px);
 }

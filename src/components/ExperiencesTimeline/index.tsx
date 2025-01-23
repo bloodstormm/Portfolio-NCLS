@@ -36,7 +36,7 @@ export const ExperiencesTimeline = () => (
               <h2 className=" font-semibold">{company}</h2>
               <h4 className="text-sm font-medium text-tertiary dark:text-highlight">{role}</h4>
 
-              <p className="my-4">
+              <p className="my-4 whitespace-pre-wrap">
                 {description
                   ? description
                   : "Não há descrição das atividades exercidas"}

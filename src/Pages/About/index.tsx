@@ -28,14 +28,14 @@ export const About = () => {
     <>
       <PageTransition />
 
-      <section className="container mx-auto flex min-h-[80vh] w-full flex-col gap-12 p-4 sm:p-6 lg:flex-row">
+      <section className="container mx-auto flex w-full flex-col gap-12 p-4 sm:p-6 lg:flex-row">
         <motion.div>
           <motion.div
             {...fadeInDown}
             transition={{ ...fadeInDown.transition, duration: 1.8, delay: 0.6 }}
             className="mt-8"
           >
-            <h1 className="text-center font-Wulkan text-5xl font-medium uppercase sm:text-left sm:text-7xl">
+            <h1 className="text-center font-Wulkan text-5xl font-medium uppercase sm:text-left xl:text-6xl 2xl:text-7xl">
               Sobre Mim
             </h1>
 
@@ -52,7 +52,7 @@ export const About = () => {
 
             <div className="mx-auto w-[90%] border border-brown/10 dark:border-beige/10"></div>
 
-            <div className="my-4 flex w-full flex-col gap-4 rounded-xl bg-primary/20 dark:bg-secondary/20 py-4 px-3 text-center font-Wulkan text-xl font-semibold sm:m-6 sm:mx-auto sm:w-fit sm:flex-row sm:gap-8 sm:p-6 sm:text-3xl sm:font-normal">
+            <div className="my-4 flex w-full flex-col gap-4 rounded-xl bg-primary/20 dark:bg-secondary/20 py-4 px-3 text-center font-Wulkan text-xl font-semibold sm:m-6 sm:mx-auto sm:w-fit sm:flex-row sm:gap-8 sm:p-6 sm:text-2xl sm:font-normal">
               <h2>
                 <span className="mr-2 text-2xl font-semibold text-primary">
                   7+
@@ -81,7 +81,7 @@ export const About = () => {
             >
               <HiOutlineCodeBracket className="mx-auto mb-2 text-4xl text-primary" />
               <h3 className="font-semibold lg:text-lg ">Front-end</h3>
-              <p className="pt-4">
+              <p className="pt-4 text-sm leading-normal">
                 Crio interfaces funcionais e bonitas, com foco na experiência do usuário
               </p>
             </motion.div>
@@ -93,7 +93,7 @@ export const About = () => {
               <h3 className="text-base font-semibold lg:text-lg ">
                 Visual & Design
               </h3>
-              <p className="pt-4">
+              <p className="pt-4 text-sm leading-normal">
                 Olho para o lado visual das coisas. Eu gosto de criar belas
                 ilustrações e animações!
               </p>
@@ -106,7 +106,7 @@ export const About = () => {
               <h3 className="text-base font-semibold lg:text-lg ">
                 Princípios
               </h3>
-              <p className="pt-4">
+              <p className="pt-4 text-sm leading-normal">
                 Sou uma pessoa de valores e prezo por tudo que faço e para quem
                 eu faço
               </p>
@@ -117,7 +117,7 @@ export const About = () => {
         <motion.div
           {...fadeInLeft}
           transition={{ ...fadeInLeft.transition, duration: 1.45, delay: 0.5 }}
-          className="mx-auto w-4/5 overflow-hidden rounded-2xl sm:relative xl:w-[35%]"
+          className="mx-auto w-4/5  overflow-hidden rounded-2xl sm:relative xl:w-[35%]"
         >
           <motion.img
             whileHover={{ scale: 1.1 }}
