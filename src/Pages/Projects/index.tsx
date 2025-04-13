@@ -19,12 +19,34 @@ export const Projects = () => {
 
         {loading ? (
           <p className="w-full text-center text-2xl">Carregando...</p>
+        ) : error?.message === "TypeError: Failed to fetch" ? (
+          <div className="flex flex-col items-center text-center">
+            <img 
+              src="/src/assets/illustrations/server_down.svg" 
+              alt="Server Down Illustration" 
+              className="w-96 mb-8"
+            />
+            <h1 className="mb-4 font-Wulkan text-4xl">
+              Servidor Temporariamente Indisponível
+            </h1>
+            <p className="mb-6 text-lg max-w-2xl">
+              O servidor está atualmente em modo de espera para economizar recursos. 
+              Para ver os projetos, por favor entre em contato comigo e ficarei feliz em ativá-lo.
+            </p>
+            <a 
+              href="mailto:nicolasmalaquias2015@gmail.com"
+              className="px-6 py-3 bg-primary dark:bg-secondary text-white rounded-full
+                hover:brightness-110 transition-all duration-300"
+            >
+              Entrar em Contato
+            </a>
+          </div>
         ) : error ? (
           <>
             <h1 className="mb-6 font-Wulkan text-4xl">
               Ocorreu um erro, por favor tente mais tarde. =(
             </h1>
-            <p>Erro: {error.message}</p>
+            {console.log("Erro do servidor: ", error.message)}
           </>
         ) : (
           <motion.div
