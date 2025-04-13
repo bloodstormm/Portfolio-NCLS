@@ -6,12 +6,20 @@ import {
   FaJira,
   FaDrupal,
   FaFigma,
+  FaVideo,
 } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { RiFileExcel2Line } from "react-icons/ri";
 import { HiOutlineMail } from "react-icons/hi";
 
 export const experiences: ExperiencesType[] = [
+  { 
+    company: "CI&T - Software",
+    initialDate: "03/2025",
+    finalDate: "Atualmente",
+    role: "UI Designer",
+    stack: [FaJira, FaFigma, FaVideo],
+  },
   {
     company: "Johnson & Johnson",
     initialDate: "01/2023",

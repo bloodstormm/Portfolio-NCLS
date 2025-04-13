@@ -1,13 +1,7 @@
 "use client";
-
-import { BsInstagram } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
 import { cn } from "../../utils/cn";
 import React, { useEffect, useState } from "react";
-import { FaLinkedinIn } from "react-icons/fa";
-import { jj, jnj } from "../../assets/companies";
-import { villarta } from "../../assets/companies";
-import { opt } from "../../assets/companies";
+import COMPANIES_DATA from "../../constants/Companies";
 
 export const CompaniesCarousel = ({
   direction = "left",
@@ -83,6 +77,8 @@ export const CompaniesCarousel = ({
       }
     }
   };
+  
+  // Then in your return statement, replace the repeated <a> tags with:
   return (
     <div
       ref={containerRef}
@@ -94,31 +90,19 @@ export const CompaniesCarousel = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full items-center shrink-0 gap-10 py-4 w-max flex-nowrap",
-          start && "animate-scroll "
+          "flex min-w-full items-center shrink-0 gap-10 py-4 w-max flex-nowrap",
+          start && "animate-scroll"
         )}
       >
-        <a href="https://www.jnj.com/" target="_blank">
-          <img
-            src={jj}
-            alt="jj"
-            className="h-9 grayscale hover:grayscale-0 transition-all duration-300 dark:brightness-200"
-          />
-        </a>
-        <a href="https://www.opt.com.br/" target="_blank">
-          <img
-            src={opt}
-            alt="opt"
-            className="h-7 grayscale hover:grayscale-0 transition-all duration-300 sm:h-12 lg:h-14 2xl:h-16"
-          />
-        </a>
-        <a href="https://www.villarta.com.br/" target="_blank">
-          <img
-            src={villarta}
-            alt="villarta"
-            className="h-7 grayscale hover:grayscale-0 transition-all duration-300 sm:h-12 lg:h-14 2xl:h-16"
-          />
-        </a>
+        {COMPANIES_DATA.map((company) => (
+          <a key={company.name} href={company.url} target="_blank">
+            <img
+              src={company.logo}
+              alt={company.name}
+              className={`transition-all duration-300 ${company.className}`}
+            />
+          </a>
+        ))}
       </ul>
     </div>
   );
