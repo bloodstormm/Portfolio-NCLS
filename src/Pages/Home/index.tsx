@@ -6,12 +6,9 @@ import { fadeInDown, fadeInUp, transition } from "../../utils/Animations";
 import { PageTransition } from "../../components/PageTransition";
 import { homeImages } from "../../constants/MyImages";
 
-import { jnj, opt, villarta } from "../../assets/companies";
-
-import { BsInstagram, BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { CompaniesCarousel } from "../../components/CompaniesCarousel";
 import { HiOutlineMail } from "react-icons/hi";
 
 export const Home = () => {
@@ -34,8 +31,8 @@ export const Home = () => {
         >
           <div className="flex flex-col gap-6">
             <h1 className="text-center font-Wulkan text-4xl lg:text-5xl font-medium uppercase lg:text-left xl:text-5xl">
-              Front-End
-              <br className="hidden lg:block" /> Developer
+              Ux/UI & 
+              <br className="hidden lg:block" /> Front-End DEV
             </h1>
 
             <p className="text-sm xl:text-base">

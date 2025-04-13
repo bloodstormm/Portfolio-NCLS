@@ -23,7 +23,19 @@ export const Header = ({ scrolled }: HeaderProps) => {
 
   // Tema do sistema do usuário
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const [theme, setTheme] = useState<String>();
+  const [theme, setTheme] = useState<string>();
+
+  // Evento para checar se o user selecionou um tema diferente do seu sistema
+  useEffect(() => {
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem("theme")) {
+        setTheme(e.matches ? "dark" : "light");
+      }
+    };
+    
+    darkQuery.addEventListener("change", handleChange);
+    return () => darkQuery.removeEventListener("change", handleChange);
+  }, []);
 
   // Na primeira vez que a página carrega, checamos se o user selecionou um tema diferente do seu sistema
   useEffect(() => {
