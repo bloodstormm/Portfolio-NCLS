@@ -6,6 +6,7 @@ import { useFetchProjects } from "../../hooks/useFetchProjects";
 import { PageTransition } from "../../components/PageTransition";
 import { ProjectCard } from "../../components/ProjectCard";
 
+
 export const Projects = () => {
   const { projects, error, loading } = useFetchProjects();
 
@@ -22,7 +23,7 @@ export const Projects = () => {
         ) : error?.message === "TypeError: Failed to fetch" ? (
           <div className="flex flex-col items-center text-center">
             <img 
-              src="/src/assets/illustrations/server_down.svg" 
+              src="/assets/illustrations/server_down.svg" 
               alt="Server Down Illustration" 
               className="w-96 mb-8"
             />
